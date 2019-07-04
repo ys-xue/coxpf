@@ -9,6 +9,25 @@ Cox Modeling of Time-to-Event Data**.
 ## Installtion
 
 ```r
+# install dependencies:
+need.packages <- function(pkgs, repos = getOption("repos"), ...)
+{
+  new.pkgs <- pkgs[!(pkgs %in% installed.packages()[, "Package"])]
+  if (length(new.pkgs) > 0) {
+    if (is.null(repos) || repos == "@CRAN@") {
+      repos <- "https://cloud.r-project.org"
+    }
+    install.packages(pkgs = new.pkgs, repos = repos, ...)
+  }
+  sapply(pkgs, function(a) {
+    suppressMessages(require(a, character.only = TRUE))
+  })
+  invisible()
+}
+
+need.packages(c("future", "survival", "tidyverse", "matrixStats", "Rcpp",
+                "RcppArmadillo", "furrr"))
+
 # use devtools to install:
 # install.packages("devtools")
 devtools::install_github("ys-xue/coxpf")
@@ -31,25 +50,6 @@ correspond to 0.072 and 0.062 in the first row of Table 1, as well as the averag
 proportion of rejections raised by each of the four statistics, corresponding
 to the first and fifth rows in Supplemental Table 1.
 
-```r
-need.packages <- function(pkgs, repos = getOption("repos"), ...)
-{
-  new.pkgs <- pkgs[!(pkgs %in% installed.packages()[, "Package"])]
-  if (length(new.pkgs) > 0) {
-    if (is.null(repos) || repos == "@CRAN@") {
-      repos <- "https://cloud.r-project.org"
-    }
-    install.packages(pkgs = new.pkgs, repos = repos, ...)
-  }
-  sapply(pkgs, function(a) {
-    suppressMessages(require(a, character.only = TRUE))
-  })
-  invisible()
-}
-
-need.packages(c("future", "survival", "tidyverse", "matrixStats", "Rcpp",
-                "RcppArmadillo", "furrr", "CoxPF"))
-```
 
 One replicate of simulation is wrapped in a `sim()` function.
 
