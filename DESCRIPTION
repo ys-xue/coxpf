@@ -1,0 +1,15 @@
+Package: CoxPF
+Type: Package
+Title: Monitor Cox Models
+Version: 1.1
+Date: 2019-06-24
+Author: John Doe <john.doe@domain.edu>
+Maintainer: John Doe <john.doe@domain.edu>
+Description: This package implements profile monitoring methods to
+              the cumulative baseline hazard curve
+License: GPL-3
+Imports: Rcpp (>= 1.0.1), purrr, matrixStats, magrittr, survival
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)
+NeedsCompilation: yes
