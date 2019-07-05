@@ -15,7 +15,7 @@
 NULL
 
 lad_shape <- function(profileMat, bandwidth, gridprecision, timevec) {
-    .Call('_CoxPF_lad_shape', PACKAGE = 'CoxPF', profileMat, bandwidth, gridprecision, timevec)
+    .Call('_coxpf_lad_shape', PACKAGE = 'coxpf', profileMat, bandwidth, gridprecision, timevec)
 }
 
 #' Compute a reference variability curve for a collection of profiles
@@ -34,6 +34,6 @@ lad_shape <- function(profileMat, bandwidth, gridprecision, timevec) {
 NULL
 
 lad_variability <- function(cprofileMat, bandwidth, gridprecision, timevec) {
-    .Call('_CoxPF_lad_variability', PACKAGE = 'CoxPF', cprofileMat, bandwidth, gridprecision, timevec)
+    .Call('_coxpf_lad_variability', PACKAGE = 'coxpf', cprofileMat, bandwidth, gridprecision, timevec)
 }
 

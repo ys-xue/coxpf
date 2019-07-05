@@ -14,7 +14,7 @@
 ##' * \code{age} - center and scaled age
 ##' * \code{Sex} - gender indicator
 ##' * \code{Black} - race indicator
-##' @importFrom stats quantile rexp
+##' @importFrom stats quantile rexp rbinom rexp rnorm runif
 ##' @importFrom utils tail 
 ##' @export
 

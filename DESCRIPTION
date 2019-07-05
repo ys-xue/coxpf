@@ -1,12 +1,17 @@
-Package: CoxPF
+Package: coxpf
 Type: Package
-Title: Monitor Cox Models
-Version: 1.1
+Title: Baseline Hazard Profile Monitor for Cox Models
+Version: 0.0.1
 Date: 2019-06-24
-Author: John Doe <john.doe@domain.edu>
-Maintainer: John Doe <john.doe@domain.edu>
+Authors@R: c(
+    person("Yishu", "Xue", email = "yishu.xue@uconn.edu",
+          role = c("aut", "cre")),
+    person("Jun", "Yan", email = "jun.yan@uconn.edu", role = "aut"),
+    person("Elizabeth D.", "Schifano",
+          email = "elizabeth.schifano@uconn.edu", role = "aut"))
 Description: This package implements profile monitoring methods to
-              the cumulative baseline hazard curve
+              the cumulative baseline hazard curve, and detects changes in both
+              the baseline hazard and the covariate effects for Cox models.
 License: GPL-3
 Imports: Rcpp (>= 1.0.1), purrr, matrixStats, magrittr, survival
 LinkingTo: Rcpp, RcppArmadillo

@@ -1,4 +1,4 @@
-#' CoxPF: Profile Monitoring Methods for Cox Modeling
+#' coxpf: Profile Monitoring Methods for Cox Modeling
 #'
 #' Functions to implement nonparametric profile monitoring methods for the
 #' cumulative baseline hazard for Cox models. 
@@ -10,7 +10,7 @@
 #' }
 #'
 #' @docType package
-#' @name CoxPF
+#' @name coxpf
 #' @import survival
-#' @useDynLib CoxPF
+#' @useDynLib coxpf
 NULL
