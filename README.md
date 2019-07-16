@@ -6,7 +6,7 @@
 **Simultaneous Monitoring for Regression Coeﬃcients and Baseline Hazard Proﬁle in
 Cox Modeling of Time-to-Event Data**. 
 
-## Installtion
+## Installation
 
 ```r
 # install dependencies:
